@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutCount"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/countryNameCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country Name"
+            android:textStyle="italic"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            >
+
+        </TextView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewCount"
+            android:layout_below="@id/countryNameCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="25dp"
+            android:elevation="25dp"
+            app:cardCornerRadius="5dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/flagCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView11"
+            android:layout_below="@+id/cardViewCount"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardElevation="20dp"
+            android:elevation="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/square_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/casesCountFragment"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:text="Cases:"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textStyle="normal"-->
+<!--                    >-->
+
+<!--                </TextView>-->
+
+                <TextView
+                    android:id="@+id/casesCountFragment1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="cases"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    >
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView22"
+            android:layout_below="@+id/cardView11"
+            app:cardElevation="20dp"
+            android:elevation="20dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/square_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/todayCasesCountFragment"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:text="Today Cases:"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textStyle="normal"-->
+<!--                    >-->
+
+<!--                </TextView>-->
+
+                <TextView
+                    android:id="@+id/todayCasesCountFragment1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cases"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    >
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView33"
+            android:layout_below="@+id/cardView22"
+            app:cardElevation="20dp"
+            android:elevation="20dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/square_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/deathsCountFragment"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:text="Deaths:"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textStyle="normal"-->
+<!--                    >-->
+
+<!--                </TextView>-->
+
+                <TextView
+                    android:id="@+id/deathsCountFragment1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cases"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    >
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView44"
+            android:layout_below="@+id/cardView33"
+            app:cardElevation="20dp"
+            android:elevation="20dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/square_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+<!--                <TextView-->
+<!--                    android:id="@+id/todayDeathsCountFragment"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:text="Today Deaths:"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textStyle="normal"-->
+<!--                    >-->
+
+<!--                </TextView>-->
+
+                <TextView
+                    android:id="@+id/todayDeathsCountFragment1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cases"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    >
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView55"
+            android:layout_below="@+id/cardView44"
+            app:cardElevation="20dp"
+            android:elevation="20dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/square_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/recoveredCountFragment"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:text="Recovered:"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textStyle="normal"-->
+<!--                    >-->
+
+<!--                </TextView>-->
+
+                <TextView
+                    android:id="@+id/recoveredCountFragment1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cases"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    >
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView66"
+            android:layout_below="@+id/cardView55"
+            app:cardElevation="20dp"
+            android:elevation="20dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/square_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/activeCountFragment"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:text="Active:"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textStyle="normal"-->
+<!--                    >-->
+
+<!--                </TextView>-->
+
+                <TextView
+                    android:id="@+id/activeCountFragment1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cases"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    >
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView77"
+            android:layout_below="@+id/cardView66"
+            app:cardElevation="20dp"
+            android:elevation="20dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/square_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/criticalCountFragment"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:text="Critical:"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textStyle="normal"-->
+<!--                    >-->
+
+<!--                </TextView>-->
+
+                <TextView
+                    android:id="@+id/criticalCountFragment1"
+                   android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cases"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    >
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
