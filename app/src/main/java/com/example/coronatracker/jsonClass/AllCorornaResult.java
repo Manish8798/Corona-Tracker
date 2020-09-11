@@ -8,7 +8,7 @@ public class AllCorornaResult {
 
     @SerializedName("updated")
     @Expose
-    private String updated;
+    private long updated;
     @SerializedName("cases")
     @Expose
     private String cases;
@@ -46,11 +46,11 @@ public class AllCorornaResult {
     @Expose
     private String affectedCountries;
 
-    public String getUpdated() {
+    public long getUpdated() {
         return updated;
     }
 
-    public void setUpdated(String updated) {
+    public void setUpdated(long updated) {
         this.updated = updated;
     }
 
