@@ -23,6 +23,9 @@ import com.example.coronatracker.apiCall.GetMethod;
 import com.example.coronatracker.apiInterface.ApiInterface;
 import com.example.coronatracker.jsonClass.AllCorornaResult;
 
+import java.util.Calendar;
+import java.util.Locale;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -91,7 +94,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     relativeLayout_main.setVisibility(View.VISIBLE);
                     btn_refresh.setVisibility(View.VISIBLE);
 
-                    updated.setText("Updated(T) :"+" " +allCorornaResult.getUpdated());
+                    Calendar cal = Calendar.getInstance(Locale.ENGLISH);
+                    cal.setTimeInMillis(allCorornaResult.getUpdated());
+                    String date = DateFormat.format("dd-MM-yyyy hh:mm:ss", cal).toString();
+
+                    updated.setText("Updated : " +date);
+//                    updated.setText("Updated(T) :"+" " +allCorornaResult.getUpdated());
                     cases.setText("Cases :"+" " +allCorornaResult.getCases());
                     todayCases.setText("Today Cases :"+" " +allCorornaResult.getTodayCases());
                     deaths.setText("Deaths :"+" " +allCorornaResult.getDeaths());
