@@ -1,2 +1,4 @@
-# CoronaTracker
-A simple but powerful android application to track COVID-19 cases.
+# Corona Tracker
+A simple but powerful Android application to track COVID-19 data.
+you can retrive data accordingly
+
