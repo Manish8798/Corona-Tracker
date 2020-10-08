@@ -5,8 +5,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class GetMethod {
 
+    private GetMethod(){
+
+    }
+
     private static final  String BASE_URL = "https://corona.lmao.ninja/v2/";
-    private static Retrofit retrofit;
+    private static Retrofit retrofit = null;
 
     public static Retrofit getRetrofit(){
 

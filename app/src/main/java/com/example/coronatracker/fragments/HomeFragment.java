@@ -1,6 +1,5 @@
 package com.example.coronatracker.fragments;
 
-import android.icu.util.ULocale;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
@@ -14,14 +13,15 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 
 import com.example.coronatracker.R;
 import com.example.coronatracker.apiCall.GetMethod;
 import com.example.coronatracker.apiInterface.ApiInterface;
 import com.example.coronatracker.jsonClass.AllCorornaResult;
+
+import java.util.Calendar;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -66,7 +66,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         progressBar_home.setVisibility(View.VISIBLE);
 
         fetchAllResult();
-
         return view;
     }
 
@@ -80,8 +79,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
                 if (!response.isSuccessful()){
                     Toast.makeText(getActivity().getBaseContext(), "Error", Toast.LENGTH_SHORT).show();
-                    CALL.cancel();
                     progressBar_home.setVisibility(View.GONE);
+                    CALL.cancel();
                 }
 
                 else {
@@ -91,9 +90,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     relativeLayout_main.setVisibility(View.VISIBLE);
                     btn_refresh.setVisibility(View.VISIBLE);
 
-                    updated.setText("Updated(T) :"+" " +allCorornaResult.getUpdated());
-                    cases.setText("Cases :"+" " +allCorornaResult.getCases());
-                    todayCases.setText("Today Cases :"+" " +allCorornaResult.getTodayCases());
+                    Calendar cal = Calendar.getInstance(Locale.ENGLISH);
+                    cal.setTimeInMillis(allCorornaResult.getUpdated());
+                    String date = DateFormat.format("dd-MM-yyyy hh:mm:ss", cal).toString();
+
+                    updated.setText("Updated : " +date);
+//                    updated.setText("Updated(T) :"+" " +allCorornaResult.getUpdated());
+                    cases.setText("Cases : "+allCorornaResult.getCases());
+                    todayCases.setText("Today Cases : "+allCorornaResult.getTodayCases());
                     deaths.setText("Deaths :"+" " +allCorornaResult.getDeaths());
                     todayDeaths.setText("Today Deaths :"+" " +allCorornaResult.getTodayDeaths());
                     recovered.setText("Recovered :"+" " +allCorornaResult.getRecovered());

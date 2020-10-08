@@ -29,6 +29,8 @@
 
         <RelativeLayout
         android:id="@+id/relativeLayoutMain_home"
+            android:background="#ffffff"
+            android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -69,7 +71,7 @@
             <TextView
                 android:id="@+id/updatedHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Updated :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -102,7 +104,7 @@
             <TextView
                 android:id="@+id/casesHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Cases :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -135,7 +137,7 @@
             <TextView
                 android:id="@+id/todayCasesHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Today Cases :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -168,7 +170,7 @@
             <TextView
                 android:id="@+id/deathsHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Deaths :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -201,7 +203,7 @@
             <TextView
                 android:id="@+id/todayDeathsHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Today Deaths :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -234,7 +236,7 @@
             <TextView
                 android:id="@+id/recoveredHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Recovered :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -268,7 +270,7 @@
             <TextView
                 android:id="@+id/activeHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Recovered :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -302,7 +304,7 @@
             <TextView
                 android:id="@+id/criticalHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Critical :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -336,7 +338,7 @@
             <TextView
                 android:id="@+id/testsHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Tests :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -369,7 +371,7 @@
             <TextView
                 android:id="@+id/casesPerOneMHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Cases Per 1 Million :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -402,7 +404,7 @@
             <TextView
                 android:id="@+id/deathsPerOneMHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Deaths Per 1 Million :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -435,7 +437,7 @@
             <TextView
                 android:id="@+id/testsPerOneMHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Tests Per 1 Million :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"
@@ -469,7 +471,7 @@
             <TextView
                 android:id="@+id/affectedCountHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:text="Affected Countries :"
                 android:textStyle="italic"
                 android:layout_centerHorizontal="true"

@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private CoordinatorLayout coordinatorLayout;
+    Fragment fragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,41 +41,39 @@ public class MainActivity extends AppCompatActivity {
         final SearchFragment searchFragment = new SearchFragment();
         final CountFragment countFragment = new CountFragment();
 
-        if (savedInstanceState == null){
+        if (savedInstanceState == null) {
 
             getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
         }
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                Fragment fragment = null;
+//                     fragment = null;
+                    switch (item.getItemId()) {
 
-                switch (item.getItemId()){
+                        case R.id.home:
+                            fragment = homeFragment;
+                            break;
 
-                    case R.id.home:
-                        fragment = homeFragment;
-                        Toast.makeText(MainActivity.this, "Home", Toast.LENGTH_SHORT).show();
-                        break;
+                        case R.id.search:
+                            fragment = searchFragment;
+                            break;
 
-                    case R.id.search:
-                        fragment = searchFragment;
-                        Toast.makeText(MainActivity.this, "Search Country", Toast.LENGTH_SHORT).show();
-                        break;
+                        case R.id.countries:
+                            fragment = countFragment;
+                            break;
 
-                    case R.id.countries:
-                        fragment = countFragment;
-                        Toast.makeText(MainActivity.this, "All Countries", Toast.LENGTH_SHORT).show();
-                        break;
+                    }
+
+//                    assert fragment != null;
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
+                    return true;
                 }
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
-                return true;
-            }
-
-        });
-    }
+            });
+        }
 
     @Override
     public void onBackPressed() {
