@@ -44,4 +44,5 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
 
     implementation 'com.github.lndmflngs:memorizing-pager:2.0.5'
+    implementation 'com.airbnb.android:lottie:3.0.0'
 }

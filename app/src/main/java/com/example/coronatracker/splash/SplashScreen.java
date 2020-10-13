@@ -24,6 +24,6 @@ public class SplashScreen extends Activity {
                 SplashScreen.this.startActivity(intentSplash);
                 SplashScreen.this.finish();
             }
-        }, 2000);
+        }, 3000);
     }
 }
