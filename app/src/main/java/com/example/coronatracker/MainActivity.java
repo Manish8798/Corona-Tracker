@@ -54,19 +54,36 @@ public class MainActivity extends AppCompatActivity {
                     switch (item.getItemId()) {
 
                         case R.id.home:
-                            fragment = homeFragment;
+                            MainActivity.this.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    fragment = homeFragment;
+                                }
+                            });
+
                             break;
 
                         case R.id.search:
-                            fragment = searchFragment;
+                            MainActivity.this.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    fragment = searchFragment;
+                                }
+                            });
+
                             break;
 
                         case R.id.countries:
-                            fragment = countFragment;
+                            MainActivity.this.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    fragment = countFragment;
+                                }
+                            });
+
                             break;
 
                     }
-
 //                    assert fragment != null;
                     getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
                     return true;

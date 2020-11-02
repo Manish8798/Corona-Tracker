@@ -1,5 +1,6 @@
 package com.example.coronatracker.fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.coronatracker.MainActivity;
 import com.example.coronatracker.R;
 import com.example.coronatracker.adapters.MyAdapterCount;
 import com.example.coronatracker.apiCall.GetMethod;
@@ -73,9 +75,13 @@ public class CountFragment extends Fragment implements View.OnClickListener {
                 }
             }
         });
-
-        fetchAllCountry();
-
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                fetchAllCountry();
+            }
+        });
+        
         return view;
     }
 
@@ -96,12 +102,16 @@ public class CountFragment extends Fragment implements View.OnClickListener {
                         Toast.makeText(getActivity().getBaseContext(), "Error", Toast.LENGTH_SHORT).show();
                         CALL_COUNT.cancel();
                         progressBar_count.setVisibility(View.GONE);
-                    } else {
-                        coronaApiCurls = response.body();
-                        progressBar_count.setVisibility(View.GONE);
-                        recyclerView.setVisibility(View.VISIBLE);
-                        recyclerView.setAdapter(new MyAdapterCount(getActivity().getBaseContext(), coronaApiCurls));
                     }
+                        try {
+                            coronaApiCurls = response.body();
+                            progressBar_count.setVisibility(View.GONE);
+                            recyclerView.setVisibility(View.VISIBLE);
+                            recyclerView.setAdapter(new MyAdapterCount(getActivity().getBaseContext(), coronaApiCurls));
+                        }
+                        catch (Exception e){
+                            e.printStackTrace();
+                        }
                 }
 
                 @Override
