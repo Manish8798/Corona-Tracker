@@ -52,7 +52,7 @@
 
         <TextView
             android:id="@+id/countryName"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_alignParentTop="true"
             android:textStyle="italic"
             android:fontFamily="sans-serif-condensed-medium"
