@@ -94,7 +94,7 @@ public class CountFragment extends Fragment implements View.OnClickListener {
 
             CALL_COUNT.enqueue(new Callback<List<CoronaApiCurl>>() {
                 @Override
-                public void onResponse(Call<List<CoronaApiCurl>> call, Response<List<CoronaApiCurl>> response) {
+                public void onResponse(@NonNull Call<List<CoronaApiCurl>> call, @NonNull Response<List<CoronaApiCurl>> response) {
 
                     if (!response.isSuccessful()) {
                         Toast.makeText(getActivity().getBaseContext(), "Error", Toast.LENGTH_SHORT).show();

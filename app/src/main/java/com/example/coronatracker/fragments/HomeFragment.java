@@ -75,7 +75,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
        final Call<AllCorornaResult> CALL = apiInterface.getAllResult();
         CALL.enqueue(new Callback<AllCorornaResult>() {
             @Override
-            public void onResponse(Call<AllCorornaResult> call, Response<AllCorornaResult> response) {
+            public void onResponse(@NonNull Call<AllCorornaResult> call, @NonNull Response<AllCorornaResult> response) {
 
                 if (!response.isSuccessful()){
                     Toast.makeText(getActivity().getBaseContext(), "Error", Toast.LENGTH_SHORT).show();

@@ -91,7 +91,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
 
         CALL_SEARCH.enqueue(new Callback<SpecificCountryCoronaAPI>() {
             @Override
-            public void onResponse(Call<SpecificCountryCoronaAPI> call, Response<SpecificCountryCoronaAPI> response) {
+            public void onResponse(@NonNull Call<SpecificCountryCoronaAPI> call, @NonNull Response<SpecificCountryCoronaAPI> response) {
 
                 if (!response.isSuccessful()){
                     Toast.makeText(getActivity().getBaseContext(), "Error(Check the name)", Toast.LENGTH_SHORT).show();
@@ -119,7 +119,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
             }
 
             @Override
-            public void onFailure(Call<SpecificCountryCoronaAPI> call, Throwable t) {
+            public void onFailure(@NonNull Call<SpecificCountryCoronaAPI> call, @NonNull Throwable t) {
 
                 Toast.makeText(getActivity().getBaseContext(), t.getMessage().toString(), Toast.LENGTH_SHORT).show();
             }
