@@ -83,7 +83,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     CALL.cancel();
                 }
 
-                else {
+                try {
+
                     AllCorornaResult allCorornaResult = response.body();
 
                     progressBar_home.setVisibility(View.GONE);
@@ -110,7 +111,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     affectedCountries.setText("Affected Countries :"+" " +allCorornaResult.getAffectedCountries());
 
                 }
-
+                catch (Exception e){
+                    e.printStackTrace();
+                }
             }
 
             @Override

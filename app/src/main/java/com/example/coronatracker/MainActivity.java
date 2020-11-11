@@ -42,8 +42,13 @@ public class MainActivity extends AppCompatActivity {
         final CountFragment countFragment = new CountFragment();
 
         if (savedInstanceState == null) {
+            MainActivity.this.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
+                }
+            });
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
         }
 
             bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

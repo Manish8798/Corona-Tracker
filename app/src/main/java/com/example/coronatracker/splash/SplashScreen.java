@@ -24,6 +24,6 @@ public class SplashScreen extends Activity {
                 SplashScreen.this.startActivity(intentSplash);
                 SplashScreen.this.finish();
             }
-        }, 3000); // time
+        }, 2000); // time
     }
 }
