@@ -42,7 +42,7 @@
                 android:textStyle="italic"
                 android:background="@drawable/button_advance"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="42dp"
                 android:text="Re-fresh"
                 android:textSize="25sp"
                 android:textColor="@color/dark_green"
