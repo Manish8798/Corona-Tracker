@@ -117,7 +117,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             }
 
             @Override
-            public void onFailure(Call<AllCorornaResult> call, Throwable t) {
+            public void onFailure(@NonNull Call<AllCorornaResult> call, @NonNull Throwable t) {
 
                 Toast.makeText(getActivity().getBaseContext(), t.getCause().toString(), Toast.LENGTH_SHORT).show();
             }

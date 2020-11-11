@@ -113,7 +113,7 @@ public class CountFragment extends Fragment implements View.OnClickListener {
                 }
 
                 @Override
-                public void onFailure(Call<List<CoronaApiCurl>> call, Throwable t) {
+                public void onFailure(@NonNull Call<List<CoronaApiCurl>> call, @NonNull Throwable t) {
 
                     Toast.makeText(getActivity().getBaseContext(), t.getMessage().toString(), Toast.LENGTH_SHORT).show();
                 }
