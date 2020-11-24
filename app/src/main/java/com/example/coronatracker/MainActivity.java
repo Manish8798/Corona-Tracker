@@ -1,18 +1,13 @@
 package com.example.coronatracker;
 
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
-
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.example.coronatracker.fragments.CountFragment;
 import com.example.coronatracker.fragments.HomeFragment;
@@ -21,17 +16,17 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private BottomNavigationView bottomNavigationView;
-    private CoordinatorLayout coordinatorLayout;
-    Fragment fragment = null;
+    BottomNavigationView bottomNavigationView;
+    CoordinatorLayout coordinatorLayout;
+    Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
-        coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
+        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
 //        frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
 //        progressBar_main = (ProgressBar) findViewById(R.id.progress_bar_mainAct);
         bottomNavigationView.setItemIconTintList(null);
@@ -42,76 +37,71 @@ public class MainActivity extends AppCompatActivity {
         final CountFragment countFragment = new CountFragment();
 
         if (savedInstanceState == null) {
-            MainActivity.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
-                }
-            });
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
 
         }
 
-            bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-//                     fragment = null;
-                    switch (item.getItemId()) {
+                switch (item.getItemId()) {
 
-                        case R.id.home:
-                            MainActivity.this.runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    fragment = homeFragment;
-                                }
-                            });
+                    case R.id.home:
+                        MainActivity.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                fragment = homeFragment;
+                            }
+                        });
 
-                            break;
+                        break;
 
-                        case R.id.search:
-                            MainActivity.this.runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    fragment = searchFragment;
-                                }
-                            });
+                    case R.id.search:
+                        MainActivity.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                fragment = searchFragment;
+                            }
+                        });
 
-                            break;
+                        break;
 
-                        case R.id.countries:
-                            MainActivity.this.runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    fragment = countFragment;
-                                }
-                            });
+                    case R.id.countries:
+                        MainActivity.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                fragment = countFragment;
+                            }
+                        });
 
-                            break;
+                        break;
 
-                    }
+                }
 //                    assert fragment != null;
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
-                    return true;
-                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
+                return true;
+            }
 
-            });
-        }
+        });
+    }
 
     @Override
     public void onBackPressed() {
 
-        BottomNavigationView  bottomNavigationView1 = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        BottomNavigationView bottomNavigationView1 = (BottomNavigationView) findViewById(R.id.bottomNavigation);
         int selectedItemId = bottomNavigationView1.getSelectedItemId();
 
-        if (R.id.home != selectedItemId){
+        if (R.id.home != selectedItemId) {
 
             setHomeItem(MainActivity.this);
+        } else {
+            super.onBackPressed();
         }
-        else {
-        super.onBackPressed();  }
     }
 
-    public static void setHomeItem(Activity activity){
+    public static void setHomeItem(Activity activity) {
 
         BottomNavigationView bottomNavigationView1 = (BottomNavigationView) activity.findViewById(R.id.bottomNavigation);
         bottomNavigationView1.setSelectedItemId(R.id.home);

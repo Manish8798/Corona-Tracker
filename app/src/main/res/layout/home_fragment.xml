@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:padding="6dp">
 
     <ProgressBar
         android:id="@+id/progressBarHome"
@@ -19,473 +17,480 @@
     </ProgressBar>
 
 
-
     <androidx.core.widget.NestedScrollView
-        android:layout_marginBottom="30dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:layout_marginBottom="2dp">
 
 
         <RelativeLayout
-        android:id="@+id/relativeLayoutMain_home"
-            android:background="#ffffff"
+            android:id="@+id/relativeLayoutMain_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            android:background="#ffffff">
 
             <Button
                 android:id="@+id/refresh_btn"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textStyle="italic"
-                android:background="@drawable/button_advance"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_advance"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:text="Re-fresh"
-                android:textSize="25sp"
                 android:textColor="@color/dark_green"
-                >
+                android:textSize="25sp"
+                android:textStyle="italic">
 
             </Button>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView1"
-        android:layout_below="@id/refresh_btn"
-        android:layout_marginTop="10dp"
-        app:cardBackgroundColor="@color/grey"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background"
-            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/refresh_btn"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
 
-            <TextView
-                android:id="@+id/updatedHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Updated :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
 
-            </TextView>
+                    <TextView
+                        android:id="@+id/updatedHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Updated :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView1"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/casesHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Cases :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView2"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/todayCasesHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Today Cases :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView3"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/deathsHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Deaths :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView4"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/todayDeathsHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Today Deaths :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView5"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/recoveredHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Recovered :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView6"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/activeHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Recovered :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView7"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/criticalHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Critical :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView8"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/testsHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Tests :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView9"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/casesPerOneMHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Cases Per 1 Million :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView10"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/deathsPerOneMHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Deaths Per 1 Million :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView11"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/testsPerOneMHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Tests Per 1 Million :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView12"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/square_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/affectedCountHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Affected Countries :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/cardView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/casesHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Cases :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_below="@+id/cardView2"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/todayCasesHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Today Cases :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
-        android:layout_below="@+id/cardView3"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/deathsHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Deaths :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
-        android:layout_below="@+id/cardView4"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/todayDeathsHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Today Deaths :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView6"
-        android:layout_below="@+id/cardView5"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/recoveredHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Recovered :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView7"
-        android:layout_below="@+id/cardView6"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/activeHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Recovered :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView8"
-        android:layout_below="@+id/cardView7"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/criticalHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Critical :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView9"
-        android:layout_below="@+id/cardView8"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/testsHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Tests :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView10"
-        android:layout_below="@+id/cardView9"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/casesPerOneMHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Cases Per 1 Million :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView11"
-        android:layout_below="@+id/cardView10"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/deathsPerOneMHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Deaths Per 1 Million :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView12"
-        android:layout_below="@+id/cardView11"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/testsPerOneMHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Tests Per 1 Million :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView13"
-        android:layout_below="@+id/cardView12"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginRight="6dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:background="@drawable/square_background">
-
-            <TextView
-                android:id="@+id/affectedCountHome"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:text="Affected Countries :"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/black"
-                android:textSize="20sp">
-
-            </TextView>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    </RelativeLayout>
 
     </androidx.core.widget.NestedScrollView>
 
