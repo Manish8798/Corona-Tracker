@@ -18,8 +18,8 @@ import java.util.List;
 
 public class MyAdapterCount extends RecyclerView.Adapter<MyAdapterCount.MyViewHolder>{
 
-    private Context context;
-    private List<CoronaApiCurl> coronaApiCurlList;
+     Context context;
+     List<CoronaApiCurl> coronaApiCurlList;
 
     public MyAdapterCount(Context context, List<CoronaApiCurl> coronaApiCurlList) {
         this.context = context;

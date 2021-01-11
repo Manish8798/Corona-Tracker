@@ -1,5 +1,6 @@
 package com.example.coronatracker.fragments;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import com.example.coronatracker.R;
@@ -22,6 +24,7 @@ import com.example.coronatracker.jsonClass.AllCorornaResult;
 
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -74,11 +77,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         ApiInterface apiInterface = GetMethod.getRetrofit().create(ApiInterface.class);
        final Call<AllCorornaResult> CALL = apiInterface.getAllResult();
         CALL.enqueue(new Callback<AllCorornaResult>() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onResponse(@NonNull Call<AllCorornaResult> call, @NonNull Response<AllCorornaResult> response) {
 
                 if (!response.isSuccessful()){
-                    Toast.makeText(getActivity().getBaseContext(), "Error", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Objects.requireNonNull(getActivity()).getBaseContext(), "Error", Toast.LENGTH_SHORT).show();
                     progressBar_home.setVisibility(View.GONE);
                     CALL.cancel();
                 }
@@ -92,6 +96,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     btn_refresh.setVisibility(View.VISIBLE);
 
                     Calendar cal = Calendar.getInstance(Locale.ENGLISH);
+                    assert allCorornaResult != null;
                     cal.setTimeInMillis(allCorornaResult.getUpdated());
                     String date = DateFormat.format("dd-MM-yyyy hh:mm:ss", cal).toString();
 
@@ -116,10 +121,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 }
             }
 
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onFailure(@NonNull Call<AllCorornaResult> call, @NonNull Throwable t) {
 
-                Toast.makeText(getActivity().getBaseContext(), t.getCause().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Objects.requireNonNull(getActivity()).getBaseContext(), Objects.requireNonNull(t.getCause()).toString(), Toast.LENGTH_SHORT).show();
             }
         });
 
