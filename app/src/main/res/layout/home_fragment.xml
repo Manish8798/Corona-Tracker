@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="2dp">
+    android:padding="8dp">
 
     <ProgressBar
         android:id="@+id/progressBarHome"
@@ -26,22 +26,19 @@
             android:id="@+id/relativeLayoutMain_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginLeft="2dp"
             android:background="#ffffff">
 
             <Button
                 android:id="@+id/refresh_btn"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/button_advance"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Re-fresh"
                 android:textColor="@color/dark_green"
-                android:textSize="26sp"
+                android:textSize="24sp"
                 android:textStyle="italic">
 
             </Button>
@@ -51,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/refresh_btn"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -60,18 +57,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/updatedHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Updated :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -84,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView1"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -93,18 +89,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/casesHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Cases :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -118,7 +113,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView2"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -127,18 +122,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/todayCasesHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Today Cases :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -152,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView3"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -161,18 +155,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/deathsHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Deaths :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -186,7 +179,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView4"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -195,18 +188,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/todayDeathsHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Today Deaths :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -220,7 +212,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView5"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -229,18 +221,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/recoveredHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Recovered :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -255,7 +246,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView6"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -264,18 +255,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/activeHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Recovered :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -290,7 +280,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView7"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -299,18 +289,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/criticalHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Critical :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -325,7 +314,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView8"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -334,18 +323,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/testsHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Tests :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -359,7 +347,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView9"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -368,18 +356,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/casesPerOneMHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Cases Per 1 Million :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -393,7 +380,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView10"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -402,18 +389,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/deathsPerOneMHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Deaths Per 1 Million :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -427,7 +413,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView11"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -436,18 +422,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/testsPerOneMHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Tests Per 1 Million :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
@@ -462,7 +447,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView12"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/grey">
 
                 <RelativeLayout
@@ -471,18 +456,17 @@
                     android:layout_marginRight="6dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/square_background"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:id="@+id/affectedCountHome"
                         android:layout_width="wrap_content"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Affected Countries :"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textStyle="italic">
 
                     </TextView>
