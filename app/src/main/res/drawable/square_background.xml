@@ -3,9 +3,9 @@
 
     <stroke android:color="@color/black"
         android:width="2dp"
-        android:dashWidth="2dp">
+        android:dashWidth="1dp">
     </stroke>
 
-    <solid android:color="#fff"></solid>
+    <solid android:color="#fff" />
 
 </shape>

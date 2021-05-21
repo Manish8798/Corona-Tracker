@@ -3,6 +3,7 @@ package com.example.coronatracker.fragments;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,7 @@ import retrofit2.Response;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
+    private static final String TAG = "HomeFragment";
     private TextView updated, cases, todayCases, deaths, todayDeaths, recovered, active, critical,
             casesPerOneMillion, deathsPerOneMillion, tests, testsPerOneMillion, affectedCountries;
 
@@ -124,8 +126,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onFailure(@NonNull Call<AllCorornaResult> call, @NonNull Throwable t) {
-
-                Toast.makeText(Objects.requireNonNull(getActivity()).getBaseContext(), Objects.requireNonNull(t.getCause()).toString(), Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onFailure: " + call.toString() + t.getMessage());
             }
         });
 
