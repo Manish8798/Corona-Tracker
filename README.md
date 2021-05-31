@@ -4,4 +4,4 @@
 
 <br/>
 
-![Alt Text](https://github.com/Manish8798/Corona-Tracker/blob/master/AppDemo.gif)
+![alt text](https://github.com/Manish8798/Corona-Tracker/blob/master/AppDemo.gif "Demo")
